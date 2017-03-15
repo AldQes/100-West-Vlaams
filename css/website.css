@@ -10,6 +10,19 @@
 
 /* ----- BASIC ELEMENTS ----- */
 
+
+.basketphoto
+{
+	width: 350px;
+
+}
+#basket
+{
+	width: auto;
+	float: left;
+	margin: auto;
+	text-align: center;
+}
 body {
 	background-color: #FFFFFF;
 	background-image: url(../images/theme/body-background.png);
