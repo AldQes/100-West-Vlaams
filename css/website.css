@@ -63,23 +63,9 @@ ul li {
     list-style-type: square;
 }
 
-label {
-    display: block;
-    float: left;
-    width: 110px;
-	height: 27px;
-	border: solid 1px #CECECE;
-	border-right: 0;
-	-moz-border-radius: 5px 0 0 5px;
-	-webkit-border-radius: 5px 0 0 5px;
-	border-radius: 5px 0 0 5px;
-	background-color: #EEEEEE;
-	padding: 7px 0 0 5px;
-	margin: 0;
-}
 
 input[type="text"], input[type="password"], input[type="email"] {
-	width: 232px;
+	width: 500px;
 	height: 34px;
 	padding: 0 5px 0 5px;
 	margin: 0 0 1em 0;
@@ -106,6 +92,9 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focu
 
 img {
 	border: 0;
+	float: left;
+
+
 }
 
 img.border {
