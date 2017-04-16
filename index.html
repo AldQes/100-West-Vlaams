@@ -16,10 +16,21 @@
     <script src="javascript/jquery.slider.load.js"></script>
     <link rel="stylesheet" href="css/website.css"/>
     <link rel='shortcut icon' type='image/iconnnnn' href='http://www.100procentwest-vlaams.be/websites/1/favicon.ic'>
-
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/fecora.css"/>
+    <script src="javascript/bootstrap/bootstrap.min.js"></script>
+    <script src="javascript/index.js"></script>
 </head>
 
 <body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.8&appId=1112354075540330";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 <section id="pageheader">
 
@@ -139,23 +150,23 @@
             Bedanktool
         </h1>
 
-        <form>
+        <form id="formIndexPage">
             <div class="form-group">
-                <label for="txtLeverancier">Leverancier:</label>
-                <input type="text" class="form-control" id="txtLeverancier">
+                <label for="txtSupplier">Leverancier:</label>
+                <input type="text" class="form-control" id="txtSupplier" required>
             </div>
 
             <div class="form-group">
-                <label for="txtNaamVerzender">Naam verzender:</label>
-                <input type="text" class="form-control" id="txtNaamVerzender">
+                <label for="txtName">Naam verzender:</label>
+                <input type="text" class="form-control" id="txtName" required>
             </div>
 
             <div class="form-group">
-                <label for="txtEmailVerzender">Email verzender:</label>
-                <input type="email" class="form-control" id="txtEmailVerzender">
+                <label for="txtEmail">Email verzender:</label>
+                <input type="email" class="form-control" id="txtEmail" required>
             </div>
 
-            <button type="submit" class="btn ">OK</button>
+            <button type="submit" class="btn btn-primary btn-md" id="btnConfirm">OK</button>
         </form>
 
     </div>
@@ -206,7 +217,6 @@
         </div>
 
         <div id="socialmedia">
-            <div id="fb-root">&nbsp;</div>
 
             <h3>Deel 100% West-Vlaams</h3>
             <p><a title="100% West-Vlaams op Facebook" href="https://www.facebook.com/100ProcentWestVlaams"
