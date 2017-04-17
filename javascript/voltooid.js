@@ -1,6 +1,5 @@
 function fetchFromLocalStorage() {
     var bedanking = localStorage.getItem("bedanking");
-    console.log(bedanking);
     $("#bedanking").text(bedanking);
 }
 
