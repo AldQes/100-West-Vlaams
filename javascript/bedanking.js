@@ -3,6 +3,10 @@ function storeInLocalStorage()
     var name = $("#txtName").val();
     var bedanking = $("#txtBedanking").val();
     var filteredBedanking = filterBedanking(bedanking);
+    $("#filteredMessage").val(filteredBedanking);
+    var email = $("#txtEmail").val();
+    var name = $("#txtName").val();
+    var supplier = $("#txtSupplier").val();
     if(typeof(Storage)=="undefined") {
         alert("Sorry, uw browser ondersteunt geen web storage");
     }
@@ -10,6 +14,9 @@ function storeInLocalStorage()
     {
         localStorage.setItem("nameRecipient", name);
         localStorage.setItem("bedanking", filteredBedanking);
+        localStorage.setItem("emailSender", email);
+        localStorage.setItem("nameSender", name);
+        localStorage.setItem("supplier", supplier);
     }
 }
 
@@ -37,10 +44,14 @@ function buildReplaceString(length)
 }
 
 $(function () {
-    $("#formBedankingPage").on("submit", function (e) {
-        e.preventDefault();  //prevent form from submitting
+
+    $("#btnConfirm").on("click", function (e) {
         storeInLocalStorage();
+        document.getElementById("form").submit();
         window.location.href="voltooid.html";
+        console.log('e86CT1xT5xIY!MdU84x#');
     });
-    console.log("load");
 });
+
+
+
