@@ -1,6 +1,7 @@
 /* ---- CSS BEDANKING VOLTOOID -------*/
 #getImage{
     display: block;
+    margin-bottom: 50px;
 }
 
 .fb-share-button{
@@ -14,3 +15,4 @@
     display: block;
 
 }
+
