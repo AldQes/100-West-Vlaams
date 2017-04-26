@@ -30,3 +30,8 @@ textarea
 {
     margin-bottom: 50px;
 }
+
+input[type=text], input[type=email]
+{
+    width: 200px;
+}
