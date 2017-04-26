@@ -34,3 +34,14 @@ input[type=text], input[type=email]
 {
     width: 200px;
 }
+
+#pageheader
+{
+    height: 450px;
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #pageheader {
+        height: 300px;
+    }
+}
