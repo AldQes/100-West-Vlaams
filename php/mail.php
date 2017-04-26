@@ -9,13 +9,15 @@ $nameRecipientBasket = $_POST['txtName'];
 $message = "
 <html>
 <head>
-<title>HTML email</title>
+<title>Bedankt</title>
 </head>
 <body>
-<h1>Bedankt, $nameSenderBasket</h1>
+<h3>Bedankt, $nameSenderBasket</h3>
+<p>Ik heb een mand ontvangen van $supplier en ik wilde je met dit bericht bedanken:</p>
 <p>$filteredMessage</p>
 <p>Met vriendelijke groet,</p>
 <p>$nameRecipientBasket</p>
+<img src='https://www.w3schools.com/css/trolltunga.jpg'/>
 </body>
 </html>
 ";
