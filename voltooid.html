@@ -10,11 +10,13 @@
     <meta charset="iso-8859-1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
+    <script src="javascript/bootstrap/bootstrap.min.js"></script>
     <script src="javascript/jquery.min.js"></script>
     <script src="javascript/jquery.load.js"></script>
     <script src="javascript/jquery.slider.min.js"></script>
     <script src="javascript/jquery.slider.load.js"></script>
     <script src="javascript/voltooid.js"></script>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fecora.css">
     <link rel="stylesheet" href="css/website.css"/>
@@ -148,7 +150,7 @@
             Uw bedanking is voltooid!
         </h1>
 
-        <div style="width: 100%">
+        <div>
             <div>
                 <h3>Uw bericht:</h3>
                 <p id="bedanking"></p>
@@ -167,13 +169,33 @@
                         <label class="star star-1" for="star-1"></label>
                     </form>
                 </div>
-                <div class="fb-share-button" data-href="http://www.100procentwest-vlaams.be" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.100procentwest-vlaams.be%2F&amp;src=sdkpreparse">Delen</a></div>
 
-                <a href="https://twitter.com/intent/tweet?button_hashtag=lekkerbedankt" class="twitter-hashtag-button" data-size="large" data-text="Ik heb net een bedanking gezonden voor mijn prachtige mand van 100%West-vlaams!" data-url="http://www.100procentwest-vlaams.be/" data-show-count="false">Tweet #lekkerbedankt</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-                <input type="button" value="Bevestig mijn beoordeling"/>
+                <form>
+                    <div class="form-group">
+                        <label for="txtBesteProduct" style="display: block">Wat vond je het beste product?</label>
+                        <input type="text" name="txtBesteProduct" id="txtBesteProduct"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtOntbrekendeProduct" style="display: block">Welk product ontbrak?</label>
+                        <input type="text" name="txtOntbrekendeProduct" id="txtOntbrekendeProduct"/>
+                    </div>
+                    <input type="button" class="btn btn-primary btn-md" value="Bevestig mijn beoordeling"
+                           style="display: block"/>
+
+                    <!--<input type="hidden" name="filteredMessage" id="filteredMessage"/>-->
+                </form>
+
+                <div class="fb-share-button" data-href="http://www.100procentwest-vlaams.be" data-layout="button"
+                     data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank"
+                                                                    href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fwww.100procentwest-vlaams.be%2F&amp;src=sdkpreparse">Delen</a>
+                </div>
+                <a href="https://twitter.com/intent/tweet?button_hashtag=lekkerbedankt" class="twitter-hashtag-button"
+                   data-size="large"
+                   data-text="Ik heb net een bedanking gezonden voor mijn prachtige mand van 100%West-vlaams!"
+                   data-url="http://www.100procentwest-vlaams.be/" data-show-count="false">Tweet #lekkerbedankt</a>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
-        <div style="clear:both"></div>
 
 
     </div>

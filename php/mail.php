@@ -2,9 +2,8 @@
 $to = $_POST['txtEmail'];
 $subject = "Bedankt voor de mand!";
 $filteredMessage = $_POST['filteredMessage'];
-$supplier = $_POST['txtSupplier'];
-$nameSenderBasket = $_POST['txtNameSender'];
-$nameRecipientBasket = $_POST['txtName'];
+$nameSenderBasket = $_POST['filteredNameSender'];
+$nameRecipientBasket = $_POST['filteredName'];
 
 $message = "
 <html>
@@ -13,7 +12,7 @@ $message = "
 </head>
 <body>
 <h3>Bedankt, $nameSenderBasket</h3>
-<p>Ik heb een mand ontvangen van $supplier en ik wilde je met dit bericht bedanken:</p>
+<p>Ik heb een mand ontvangen en ik wilde je met dit bericht bedanken:</p>
 <p>$filteredMessage</p>
 <p>Met vriendelijke groet,</p>
 <p>$nameRecipientBasket</p>

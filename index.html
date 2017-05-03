@@ -160,10 +160,6 @@
         <div id="formBedanking">
             <form id="form" action="php/mail.php" method="post">
                 <div class="form-group">
-                    <label for="txtSupplier">Leverancier:</label>
-                    <input type="text" class="form-control" name="txtSupplier" id="txtSupplier" required>
-                </div>
-                <div class="form-group">
                     <label for="txtNameSender">Naam verzender:</label>
                     <input type="text" class="form-control" name="txtNameSender" id="txtNameSender" required>
                 </div>
@@ -182,6 +178,8 @@
                     </textarea>
                 </div>
                 <input type="hidden" name="filteredMessage" id="filteredMessage"/>
+                <input type="hidden" name="filteredNameSender" id="filteredNameSender"/>
+                <input type="hidden" name="filteredName" id="filteredName">
                 <button type="submit" class="btn btn-primary btn-md" id="btnConfirm">Verstuur</button>
             </form>
         </div>
