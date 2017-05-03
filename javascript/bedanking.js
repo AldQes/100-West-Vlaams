@@ -13,7 +13,6 @@ function storeInLocalStorage() {
         localStorage.setItem("bedanking", filteredBedanking);
         localStorage.setItem("emailSender", email);
         localStorage.setItem("nameSender", name);
-        localStorage.setItem("supplier", supplier);
     }
 }
 
@@ -37,14 +36,29 @@ function buildReplaceString(length) {
 }
 
 $(function () {
-
     $("#btnConfirm").on("click", function (e) {
-        storeInLocalStorage();
-        if ($("#form").valid())
+
+        var form = document.getElementById("form");
+        var $form = $("#form");
+        if (form.checkValidity())
         {
-            document.getElementById("form").submit();
-            window.location.href = "voltooid.html";
-            //console.log('e86CT1xT5xIY!MdU84x#');
+            var bedanking = document.getElementById("txtBedanking").value.trim();
+            console.log(bedanking);
+            if(bedanking != "") {
+                storeInLocalStorage();
+                form.submit();
+                //window.location.href = "voltooid.html";
+                //console.log('e86CT1xT5xIY!MdU84x#');
+            }
+            else
+            {
+                alert("Geef een bedanking in");
+            }
+        }
+        else
+        {
+            //trigger validation errors
+            $form.find(':submit').click();
         }
     });
 })

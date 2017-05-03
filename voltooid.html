@@ -10,11 +10,11 @@
     <meta charset="iso-8859-1"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
-    <script src="javascript/bootstrap/bootstrap.min.js"></script>
     <script src="javascript/jquery.min.js"></script>
     <script src="javascript/jquery.load.js"></script>
     <script src="javascript/jquery.slider.min.js"></script>
     <script src="javascript/jquery.slider.load.js"></script>
+    <script src="javascript/bootstrap/bootstrap.min.js"></script>
     <script src="javascript/voltooid.js"></script>
     <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
@@ -170,19 +170,27 @@
                     </form>
                 </div>
 
-                <form>
+                <form id="form" action="php/mailcommentaar.php" method="post">
                     <div class="form-group">
                         <label for="txtBesteProduct" style="display: block">Wat vond je het beste product?</label>
-                        <input type="text" name="txtBesteProduct" id="txtBesteProduct"/>
+                        <input type="text" name="txtBesteProduct" id="txtBesteProduct" required/>
                     </div>
                     <div class="form-group">
                         <label for="txtOntbrekendeProduct" style="display: block">Welk product ontbrak?</label>
-                        <input type="text" name="txtOntbrekendeProduct" id="txtOntbrekendeProduct"/>
+                        <input type="text" name="txtOntbrekendeProduct" id="txtOntbrekendeProduct" required/>
                     </div>
-                    <input type="button" class="btn btn-primary btn-md" value="Bevestig mijn beoordeling"
+                    <div class="form-group">
+                        <label for="txtAndereCommentaar" style="display: block">Hebt u nog andere commentaar?</label>
+                        <textarea class="form-control" name="txtAndereCommentaar" id="txtAndereCommentaar" required>
+                    </textarea>
+                    </div>
+                    <input type="submit" style="display: none;"/>
+                    <input type="button" class="btn btn-primary btn-md" id="btnConfirm" value="Bevestig mijn beoordeling"
                            style="display: block"/>
-
-                    <!--<input type="hidden" name="filteredMessage" id="filteredMessage"/>-->
+                    <input type="hidden" name="filteredBesteProduct" id="filteredBesteProduct"/>
+                    <input type="hidden" name="filteredOntbrekendeProduct" id="filteredOntbrekendeProduct"/>
+                    <input type="hidden" name="filteredAndereCommentaar" id="filteredAndereCommentaar"/>
+                    <input type="hidden" name="ratingValue" id="ratingValue">
                 </form>
 
                 <div class="fb-share-button" data-href="http://www.100procentwest-vlaams.be" data-layout="button"
