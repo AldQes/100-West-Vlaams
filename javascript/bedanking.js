@@ -1,19 +1,10 @@
 function storeInLocalStorage() {
     var nameSender = $("#txtNameSender").val();
     var bedanking = $("#txtBedanking").val();
-
+    var filteredBedanking = filterBedanking(bedanking);
+    $("#filteredMessage").val(filteredBedanking);
     var email = $("#txtEmail").val();
     var name = $("#txtName").val();
-
-    var filteredBedanking = filter(bedanking);
-    $("#filteredMessage").val(filteredBedanking);
-
-    var filteredNameSender = filter(nameSender);
-    $("#filteredNameSender").val(filteredNameSender);
-
-    var filteredName = filter(name);
-    $("#filteredName").val(filteredName);
-
     if (typeof(Storage) == "undefined") {
         alert("Sorry, uw browser ondersteunt geen web storage");
     }
@@ -27,7 +18,7 @@ function storeInLocalStorage() {
 }
 
 
-function filter(bedanking) {
+function filterBedanking(bedanking) {
     var offensiveWords = ["neger", "nigger", "nigga", "fuck", "dick", "bitch", "wtf"];
     bedanking = bedanking.toLowerCase();
     for (var i = 0; i < offensiveWords.length; i++) {

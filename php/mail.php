@@ -2,8 +2,8 @@
 $to = $_POST['txtEmail'];
 $subject = "Bedankt voor de mand!";
 $filteredMessage = $_POST['filteredMessage'];
-$nameSenderBasket = $_POST['filteredNameSender'];
-$nameRecipientBasket = $_POST['filteredName'];
+$nameSenderBasket = $_POST['txtNameSender'];
+$nameRecipientBasket = $_POST['txtName'];
 
 $message = "
 <html>
