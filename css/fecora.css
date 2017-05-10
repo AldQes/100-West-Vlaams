@@ -44,6 +44,10 @@ input[type=text], input[type=email]
     #pageheader {
         height: auto;
     }
+    .basketphoto{
+        display: block;
+        width: 100%;
+    }
 }
 
 div.stars {

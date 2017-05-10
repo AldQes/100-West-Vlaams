@@ -18,7 +18,7 @@ function storeInLocalStorage() {
 
 function updateSelectedImage(imageString, id)
 {
-    $("#selectedImage").val(imageString);
+    $("#selectedImage").val(imageString.substring(imageString.lastIndexOf("/")));
     var image = document.getElementById(id);
     image.style.border = "5px solid black";
 
@@ -74,13 +74,18 @@ $(function () {
             var bedanking = document.getElementById("txtBedanking").value.trim();
             console.log(bedanking);
             if(bedanking != "") {
-                storeInLocalStorage();
-                form.submit();
-                //window.location.href = "voltooid.html";
-                //console.log('e86CT1xT5xIY!MdU84x#');
+                if($("#selectedImage").val() != "") {
+                    storeInLocalStorage();
+                    form.submit();
+                    //window.location.href = "voltooid.html";
+                    //console.log('e86CT1xT5xIY!MdU84x#');
+                }
+                else
+                {
+                    alert("Selecteer een bedankingsfoto");
+                }
             }
-            else
-            {
+            else {
                 alert("Geef een bedanking in");
             }
         }
