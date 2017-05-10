@@ -16,6 +16,23 @@ function storeInLocalStorage() {
     }
 }
 
+function updateSelectedImage(imageString, id)
+{
+    $("#selectedImage").val(imageString);
+    var image = document.getElementById(id);
+    image.style.border = "5px solid black";
+
+    for(var i=1; i<=3; i++)
+    {
+        var check = "img" + i;
+        if(check != id)
+        {
+            var remove = document.getElementById(check);
+            remove.style.border = 'none';
+        }
+    }
+
+}
 
 function filterBedanking(bedanking) {
     var offensiveWords = ["neger", "nigger", "nigga", "fuck", "dick", "bitch", "wtf"];
@@ -36,6 +53,18 @@ function buildReplaceString(length) {
 }
 
 $(function () {
+    $("#img1").on("click",function () {
+        updateSelectedImage($(this).attr('src'),$(this).attr('id'));
+    });
+
+    $("#img2").on("click",function () {
+        updateSelectedImage($(this).attr('src'),$(this).attr('id'));
+    });
+
+    $("#img3").on("click",function () {
+        updateSelectedImage($(this).attr('src'),$(this).attr('id'));
+    });
+
     $("#btnConfirm").on("click", function (e) {
 
         var form = document.getElementById("form");

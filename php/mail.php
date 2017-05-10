@@ -4,6 +4,7 @@ $subject = "Bedankt voor de mand!";
 $filteredMessage = $_POST['filteredMessage'];
 $nameSenderBasket = $_POST['txtNameSender'];
 $nameRecipientBasket = $_POST['txtName'];
+$imageString = $_POST['selectedImage'];
 
 $message = "
 <html>
@@ -16,7 +17,7 @@ $message = "
 <p>$filteredMessage</p>
 <p>Met vriendelijke groet,</p>
 <p>$nameRecipientBasket</p>
-<img src='https://www.w3schools.com/css/trolltunga.jpg'/>
+<img src='u/' .$imageString. '.jpg'/>
 </body>
 </html>
 ";

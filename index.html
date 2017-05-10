@@ -152,9 +152,9 @@
 
         <div id="basket">
             <p>Kies uw bedanking hier:</p>
-            <img src="images/photos/emptyphoto.gif" class="basketphoto"/>
-            <img src="images/photos/emptyphoto.gif" class="basketphoto"/>
-            <img src="images/photos/emptyphoto.gif" class="basketphoto"/>
+            <img src="images/photos/emptyphoto.gif" id="img1" class="basketphoto"/>
+            <img src="images/photos/emptyphoto.gif" id="img2" class="basketphoto"/>
+            <img src="images/photos/emptyphoto.gif" id="img3" class="basketphoto"/>
         </div>
 
         <div id="formBedanking">
@@ -178,6 +178,7 @@
                     </textarea>
                 </div>
                 <input type="hidden" name="filteredMessage" id="filteredMessage"/>
+                <input type="hidden" name="selectedImage" id="selectedImage"/>
                 <input type="submit" style="display: none;"/>
                 <input type="button" class="btn btn-primary btn-md" id="btnConfirm" value="Verstuur"/>
             </form>
